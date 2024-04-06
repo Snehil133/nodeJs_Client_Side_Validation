@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col">
+            <img src="" alt="" class="img-fluid">
+        </div>
+        <div class="col">
+            <h2 class="text-center">Personalized shopping</h2>
+        </div>
+        <div class="col">
+            <a href="/html/cart.html" class="btn btn-primary float-right">View Cart</a>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h2 class="mt-4">List of products</h2>
+        </div>
+    </div>
+
+    <!-- Clothing Section -->
+    <div class="row mt-4">
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="card">
+                <img src="/images/2.webp" class="img-fluid" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">COMBRAIDED</h5>
+                    <p class="card-text">Men Slim Fit Black Lycra</p>
+                    <div class="d-flex justify-content-between">
+                        <div class="text-success font-weight-bold">₹289</div>
+                        <div class="text-muted"><del>₹1,599</del></div>
+                        <div class="text-danger font-weight-bold">81% off</div>
+                    </div>
+                    <button class="btn btn-primary mt-2" onclick="addToCart('COMBRAIDED', '289')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more clothing cards here -->
+        <!-- Repeat the card elements for other products -->
+    </div>
+</div>
+
+<!-- Modal for "Added to Cart" confirmation -->
+<div class="modal fade" id="addToCartModal" tabindex="-1" role="dialog" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addToCartModalLabel">Added to Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                The product has been added to your cart.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/catalog.js"></script>
+</body>
+</html>
